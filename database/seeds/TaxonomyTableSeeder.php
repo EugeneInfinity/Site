@@ -40,9 +40,9 @@ class TaxonomyTableSeeder extends Seeder
                 'system_name' => 'product_categories',
                 'name' => 'Категории товаров',
                 'description' => 'Категории товаров магазина',
-                'options' => [
+                'options' => json_encode([
                     'has_hierarchy' => 1,
-                ],
+                ]),
                 'terms' => [
                     ['name' => 'Уход за волосами',
                         'terms' => [
@@ -72,15 +72,15 @@ class TaxonomyTableSeeder extends Seeder
                 'system_name' => 'order_statuses',
                 'name' => 'Статусы заказов',
                 'description' => 'Статусы заказов',
-                'options' => [
+                'options' => json_encode([
                     'has_hierarchy' => 0,
-                ],
+                ]),
                 'terms' => [
-                    ['name' => 'Новый заказ', 'description' => '', 'system_name' => 'order_new', 'safe' => 1, 'options' => ['admin_style' => 'label label-info']],
-                    ['name' => 'Отправлен клиенту', 'description' => '', 'system_name' => 'order_shipping', 'options' => ['admin_style' => 'label label-warning']],
-                    ['name' => 'Успешно получен', 'description' => '', 'system_name' => 'order_accept', 'safe' => 1, 'options' => ['admin_style' => 'label label-success']],
-                    ['name' => 'Отклонен', 'description' => '', 'system_name' => 'order_rejected', 'safe' => 1, 'options' => ['admin_style' => 'label label-danger']],
-                    ['name' => 'Отказ', 'description' => '', 'system_name' => 'order_refund', 'options' => ['admin_style' => 'label label-danger']],
+                    ['name' => 'Новый заказ', 'description' => '', 'system_name' => 'order_new', 'safe' => 1, 'options' => json_encode(['admin_style' => 'label label-info'])],
+                    ['name' => 'Отправлен клиенту', 'description' => '', 'system_name' => 'order_shipping', 'options' => json_encode(['admin_style' => 'label label-warning'])],
+                    ['name' => 'Успешно получен', 'description' => '', 'system_name' => 'order_accept', 'safe' => 1, 'options' => json_encode(['admin_style' => 'label label-success'])],
+                    ['name' => 'Отклонен', 'description' => '', 'system_name' => 'order_rejected', 'safe' => 1, 'options' => json_encode(['admin_style' => 'label label-danger'])],
+                    ['name' => 'Отказ', 'description' => '', 'system_name' => 'order_refund', 'options' => json_encode(['admin_style' => 'label label-danger'])],
                 ],
             ],
             [
@@ -88,9 +88,9 @@ class TaxonomyTableSeeder extends Seeder
                 'name' => 'Статусы оплат',
                 'description' => 'Статусы оплаты товаров/услуг',
                 'terms' => [
-                    ['name' => 'Не оплачено', 'description' => 'Новый платеж, ожидает оплаты', 'system_name' => 'payment_new', 'safe' => 1, 'options' => ['admin_style' => 'label label-warning']],
-                    ['name' => 'Оплата успешна', 'description' => 'Оплата проведена успешно', 'system_name' => 'payment_success', 'safe' => 1, 'options' => ['admin_style' => 'label label-success']],
-                    ['name' => 'Ошибка оплаты', 'description' => 'Оплата не проведена', 'system_name' => 'payment_fail', 'safe' => 1, 'options' => ['admin_style' => 'label label-danger']],
+                    ['name' => 'Не оплачено', 'description' => 'Новый платеж, ожидает оплаты', 'system_name' => 'payment_new', 'safe' => 1, 'options' => json_encode(['admin_style' => 'label label-warning'])],
+                    ['name' => 'Оплата успешна', 'description' => 'Оплата проведена успешно', 'system_name' => 'payment_success', 'safe' => 1, 'options' => json_encode(['admin_style' => 'label label-success'])],
+                    ['name' => 'Ошибка оплаты', 'description' => 'Оплата не проведена', 'system_name' => 'payment_fail', 'safe' => 1, 'options' => json_encode(['admin_style' => 'label label-danger'])],
                 ],
             ],
             [
