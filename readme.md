@@ -4,7 +4,7 @@
 
 ```
 cp .env.example .env
-composet install
+composer install
 ```
 ### Настраиваем .env
 
